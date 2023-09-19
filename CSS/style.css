@@ -13,7 +13,7 @@ ol {
 }
 .container {
   width: 1108px;
-  margin: auto;
+  margin: 50px auto;
 }
 .row {
   display: flex;
@@ -31,6 +31,12 @@ ol {
 }
 .slide {
   padding: 0 20px;
+  transform: scale(0.85);
+  transition: 0.35s;
+}
+.slide.slick-center {
+  transform: scale(1);
+  transition: 0.55s;
 }
 .left_arrow,
 .right_arrow {
@@ -46,8 +52,33 @@ ol {
   position: relative;
 }
 .left_arrow {
-  left: 128px;
+  left: 144px;
+  font-size: 18px;
+}
+.right_arrow:hover,
+.left_arrow:hover i {
+  color: red;
 }
 .right_arrow {
-  right: 128px;
+  right: 144px;
+  font-size: 18px;
+}
+.slick-dots {
+  text-align: center;
+  margin-top: 50px;
+}
+.slick-dots li {
+  display: inline-block;
+  margin: 0 8px;
+}
+.slick-dots li button {
+  color: transparent;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background-color: black;
+  transition: 0.45s ease;
+}
+.slick-dots li.slick-active button {
+  width: 50px;
 }
